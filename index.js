@@ -43,7 +43,9 @@ mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedT
         }
         )
     })
-
+app.get('/',(req,res)=>{
+    res.send("hello")
+})
 app.get('/find',(req,res)=>{
     const user=User.find()
     .then(result=>res.send({}))
