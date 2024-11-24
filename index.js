@@ -51,4 +51,4 @@ app.get('/find',(req,res)=>{
     .then(result=>res.send({}))
     console.log("hello")
 })
-app.use(userRouter)
+app.use('/api',userRouter);
